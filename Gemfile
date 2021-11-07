@@ -62,7 +62,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise'
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
-gem 'omniauth-facebook'
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile-mini_magick"
+gem 'bootstrap'
+gem 'jquery-rails'
+gem 'font-awesome-sass'
+gem 'kaminari'
 gem 'dotenv-rails'
