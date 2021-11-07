@@ -1,0 +1,14 @@
+<header>
+  <nav>
+    <div class="container">
+      <%= link_to image_tag("upper-compatible.png", size: "210x70"), root_path, class: "image", alt: "ロゴ" %>
+      <div class="navbar nav-left">
+        <% if customer_signed_in? %>
+          
+        <% else %>
+          
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>
