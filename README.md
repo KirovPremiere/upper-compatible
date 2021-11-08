@@ -32,7 +32,7 @@
 ## カラー
 - メイン　#FFF803
 - サブ　#201D19
-- スーパーサブ　#F42500
+- スーパーサブ　#3E474F
 
 ## チャレンジ要素一覧
 - https://docs.google.com/spreadsheets/d/1zf3iLrG99xJUj-6eGpQUiHcDNSV5kUaz1EE8sOviwro/edit?usp=sharing
