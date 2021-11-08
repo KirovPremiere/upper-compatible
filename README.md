@@ -34,6 +34,9 @@
 - サブ　#201D19
 - スーパーサブ　#3E474F
 
+## フォント
+- font-family: "M PLUS 1p";
+
 ## チャレンジ要素一覧
 - https://docs.google.com/spreadsheets/d/1zf3iLrG99xJUj-6eGpQUiHcDNSV5kUaz1EE8sOviwro/edit?usp=sharing
 
