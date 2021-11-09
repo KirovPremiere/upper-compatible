@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2021_11_07_012942) do
   create_table "comments", force: :cascade do |t|
     t.integer "item_id"
     t.text "opinion", default: "", null: false
+    t.string "image_id", default: "", null: false
     t.integer "price", null: false
     t.integer "point", null: false
     t.datetime "created_at", null: false
@@ -28,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_11_07_012942) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.string "name", default: "", null: false
-    t.integer "birthday", null: false
+    t.date "birthday", null: false
     t.integer "sex", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -51,6 +52,8 @@ ActiveRecord::Schema.define(version: 2021_11_07_012942) do
 
   create_table "items", force: :cascade do |t|
     t.integer "genre_id"
+    t.string "image_id", default: "", null: false
+    t.text "introduction", default: "", null: false
     t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
