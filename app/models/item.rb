@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
   belongs_to :genre
   has_many :comments
-  has_many :images
+  attachment :image
   
-  validates :name, :genre_id, presence: true
+  validates :name, :genre_id, :image_id, :introduction, presence: true
 end
