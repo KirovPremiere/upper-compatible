@@ -1,0 +1,40 @@
+<div class="customer">
+  <div class="container py-5 login-form">
+    <div class="row w-50 mx-auto shadow-lg bg-white bg-opacity-50">
+      <div class="mt-5">
+        <span class="fs-3 offset-md-1 font-monospace login-form"><b>サインイン</b></span>
+      </div>
+      <%= form_with model: @customer, local: true do |f| %>
+        <div class="field">
+          <%= f.label :ハンドルネーム, class:"offset-2 col-5 mt-3" %>
+          <%= f.text_field :name, autofocus: true %>
+        </div>
+        
+        <div class="field">
+          <%= f.label :性別, class:"offset-2 col-5 mt-3" %>
+          <%= f.label :男性 %>
+          <%= f.radio_button :sex, :man %>
+          <%= f.label :女性 %>
+          <%= f.radio_button :sex, :woman %>
+          <%= f.label :その他 %>
+          <%= f.radio_button :sex, :others %>
+        </div>
+
+        <div class="field">
+          <%= f.label :生年月日, class:"offset-2 col-5 mt-3" %>
+          <%= raw sprintf(f.date_select(:birthday,
+              use_month_numbers: true,
+              start_year: 1930,
+              end_year: (Time.now.year),
+              default: Date.new(1989, 1, 1),
+              date_separator: '%s'),'年 ', '月 ') + '日' %>
+        </div>
+
+        <div class="actions offset-5 mt-4">
+          <%= f.submit "編集確定", class:"btn btn-primary" %>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
