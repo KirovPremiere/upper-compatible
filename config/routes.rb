@@ -6,8 +6,9 @@ Rails.application.routes.draw do
 
   resource :customers, only: [:show, :edit, :update]
   resources :genres, only: [:index, :show]
+  resources :big_fours, only: [:index, :show]
   resources :items, only: [:index, :new, :create, :show, :edit, :update] do
-    resources :comments, only: [:new, :create, :show, :edit, :update]
+    resources :comments, only: [:new, :create, :index, :edit, :update]
   end
 
   devise_for :customer, controllers: {

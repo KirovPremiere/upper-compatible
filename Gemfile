@@ -67,6 +67,5 @@ gem "refile-mini_magick"
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
-gem 'kaminari'
 gem 'dotenv-rails'
 gem 'enum_help'

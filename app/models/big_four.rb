@@ -1,0 +1,2 @@
+class BigFour < ApplicationRecord
+end
