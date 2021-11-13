@@ -1,11 +1,8 @@
 class ItemsController < ApplicationController
-  def index
-    @items = Item.page(params[:page]).reverse_order
-  end
   
   def show
     @item = Item.find(params[:id])
-    @comment = Comment.new
+    @comments = Comment.all
   end
   
   def new
@@ -30,9 +27,9 @@ class ItemsController < ApplicationController
     redirect_to item_path(item_params)
   end
   
-  
+  private
   def item_params
-    params.require(:item).permit(:name, :image_id, :genre_id, :price, :point, :opinion)
+    params.require(:item).permit(:name, :image_id, :genre_id, :introduction)
   end
   
 end

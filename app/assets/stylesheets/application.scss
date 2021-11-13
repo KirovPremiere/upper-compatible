@@ -154,22 +154,22 @@
   background: #0090aa;
 }
 .cut1 {
-  background: url(noimage.jpeg) no-repeat top center;
+  background: image-url(noimage.jpeg) no-repeat top center;
   background-size: cover;
   color: rgba(255,255,255,.7);
 }
 .cut2 {
-  background: url(http://webcreatorbox.com/sample/images/cat2.jpg) no-repeat top center;
+  background: image-url(noimage.jpeg) no-repeat top center;
   background-size: cover;
   color: rgba(0,0,0,.7);
 }
 .cut3 {
-  background: url(http://webcreatorbox.com/sample/images/cat2.jpg) no-repeat top center;
+  background: image-url(noimage.jpeg) no-repeat top center;
   background-size: cover;
   color: rgba(0,0,0,.7);
 }
 .cut4 {
-  background: url(http://webcreatorbox.com/sample/images/cat1.jpg) no-repeat top center;
+  background: image-url(noimage.jpeg) no-repeat top center;
   background-size: cover;
   color: rgba(255,255,255,.7);
 }
@@ -184,7 +184,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  background: #3E474F;
+  background: #dadada;
 }
 
 .search .Box {
@@ -220,5 +220,15 @@
   vertical-align: middle;
 }
 .search .border{
-  margin-top: 3px;
+  margin-top: 5px;
 }
+
+
+
+/*ジャンル一覧表示*/
+.genre-index .column{
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column;
+}
+

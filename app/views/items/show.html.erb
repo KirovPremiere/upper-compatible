@@ -2,7 +2,32 @@
   <div class='container p-4'>
     <div class='row'>
       <div class='col-md-12 mx-auto text-center items-all'>
+        <%= attachment_image_tag @item, :image %>
+        <p>商品名：<%= @item.name %></p>
+        <p>商品説明：<%= @item.introduction %></p>
+        <p>平均購入価格：</p>
+        <p>平均満足度：</p>
         
+        <div class="mt-5">
+          <span class="fs-3 offset-md-1 font-monospace comment-form"><b>コメント一覧</b></span>
+        </div>
+        <div class="">
+          <%= link_to "コメント追加", edit_item_comment_path(@item) %>
+        </div>
+        <div class="">
+          <% @comments.each do |comment| %>
+            <div>
+              <p>ユーザーネーム：<%= comment.customer.name %></p>
+              <p>投稿日時：<%= comment.created_at.strftime('%Y/%m/%d') %></p>
+              <p>商品コメント：<%= comment.opinion %></p>
+              <p>購入時価格：<%= comment.price %></p>
+              <p>商品満足度：<%= comment.point %></p>
+              <% if comment.customer == current_customer %>
+                <%= link_to "編集", edit_item_comment_path(comment) %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

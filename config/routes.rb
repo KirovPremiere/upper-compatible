@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   get '/search' => 'search#search'
 
   resource :customers, only: [:show, :edit, :update]
+  resources :big_fours, only: [:show]
   resources :genres, only: [:index, :show]
-  resources :big_fours, only: [:index, :show]
-  resources :items, only: [:index, :new, :create, :show, :edit, :update] do
-    resources :comments, only: [:new, :create, :index, :edit, :update]
+  resources :items, only: [:new, :create, :show, :edit, :update] do
+    resources :comments, only: [:new, :create, :edit, :update]
   end
 
   devise_for :customer, controllers: {

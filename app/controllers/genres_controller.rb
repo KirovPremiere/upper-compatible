@@ -1,6 +1,7 @@
 class GenresController < ApplicationController
   def index
-    @genres = Genre.all
+    @big_fours = BigFour.all
+    @genres = Genre.big_fours
   end
   
   def show

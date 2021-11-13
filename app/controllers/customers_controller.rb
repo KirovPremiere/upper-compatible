@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
   def top
-    @genres = Genre.all
+    @big_fours = BigFour.all
   end
   
   def about
