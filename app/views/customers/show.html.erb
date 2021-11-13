@@ -2,7 +2,23 @@
   <div class='container p-4'>
     <div class='row'>
       <div class='col-md-12 mx-auto text-center items-all'>
-        
+        <p class="col-3 m-0 d-flex align-items-center"><%= link_to "編集する", edit_customers_path(current_customer) %></p>       
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>ハンドルネーム</td>
+              <td><%= @customer.name %></td>
+            </tr>
+            <tr>
+              <td>生年月日</td>
+              <td><%= @customer.birthday %></td>
+            </tr>
+            <tr>
+              <td>性別</td>
+              <td><%= @customer.sex %></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
