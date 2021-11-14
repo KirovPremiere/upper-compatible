@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_11_11_140539) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "item_id"
-    t.text "opinion", default: "", null: false
+    t.text "opinion", null: false
     t.string "image_id", default: "", null: false
     t.integer "price", null: false
     t.integer "point", null: false
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2021_11_11_140539) do
   create_table "items", force: :cascade do |t|
     t.integer "genre_id"
     t.string "image_id", default: "", null: false
-    t.text "introduction", default: " ", null: false
+    t.text "introduction", null: false
     t.string "name", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
