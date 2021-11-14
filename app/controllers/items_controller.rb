@@ -7,7 +7,8 @@ class ItemsController < ApplicationController
   
   def new
     @item = Item.new
-    @genres = Genre.all
+    @big_fours =BigFour.all
+    
   end
   
   def create

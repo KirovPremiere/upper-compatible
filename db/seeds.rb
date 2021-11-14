@@ -5,15 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-BigFour.create!(
-   name: '日用品'
- )
-BigFour.create!(
-   name: '食品・飲料'
- )
-BigFour.create!(
-   name: '家具・家電'
- )
-BigFour.create!(
-   name: 'サービス'
- )
+
+ 
+big_fours = ["日用品","食品・飲料","家具・家電","サービス"]
+big_fours.each do |big_four|
+   BigFour.create(name: big_four)
+end
