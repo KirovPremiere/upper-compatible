@@ -12,7 +12,7 @@
           <span class="fs-3 offset-md-1 font-monospace comment-form"><b>コメント一覧</b></span>
         </div>
         <div class="">
-          <%= link_to "コメント追加", edit_item_comment_path(@item) %>
+          <%= link_to "コメント追加", new_item_comment_path(@item) %>
         </div>
         <div class="">
           <% @comments.each do |comment| %>

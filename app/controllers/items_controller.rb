@@ -7,18 +7,24 @@ class ItemsController < ApplicationController
   
   def new
     @item = Item.new
-    @big_fours =BigFour.all
-    
+    @big_fours = BigFour.all
+    @genres = Genre.all
   end
   
   def create
     @item = Item.new(item_params)
-    @item.save
-    redirect_to item_path(item_params)
+    if @item.save
+      redirect_to item_path(@item)
+    else
+      @big_fours = BigFour.all
+      @genres = Genre.all
+      render :new
+    end
   end
   
   def edit
     @item = Item.find(params[:id])
+    @big_fours = BigFour.all
     @genres = Genre.all
   end
   
