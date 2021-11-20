@@ -16,7 +16,6 @@
     <div class="Box">
       <%= form_with url: search_path, method: :get, local: true do |f| %>
         <%= f.text_field 'search[value]', placeholder: "商品の検索はこちらから", class:"Box-SearchInput" %>
-        <%= f.select 'search[how]', options_for_select({ "部分一致" => "partical", "前方一致" => "forward", "後方一致" => "backward", "完全一致" => "match" }) ,{},class:"border" %>
         <%= f.button :type => "submit", style: 'border-style: none; background: none;',class:"Box-Btn" do %>
           <i class="fas fa-search justify-content-center"></i>
         <% end %>
@@ -33,7 +32,7 @@
   </div>
   <div class="column cut4">
     <div class="info">
-      <a href="big_fours/12"><h2>サービス</h2></a>
+      <a href="big_fours/12"><h2>文房具</h2></a>
     </div>
   </div>
 </div>

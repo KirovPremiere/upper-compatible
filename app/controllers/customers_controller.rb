@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  before_action :authenticate_customer!,except: [:top, :about, :info]
+  
   def top
     @big_fours = BigFour.all
   end
