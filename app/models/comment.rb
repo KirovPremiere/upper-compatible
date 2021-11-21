@@ -2,9 +2,10 @@ class Comment < ApplicationRecord
   belongs_to :item
   belongs_to :customer
   has_many :favorites
+  attachment :image
   
   def favorited_by?(customer)
-    favorites.where(customer_id: cus.id).exists?
+    favorites.where(customer_id: customer.id).exists?
   end
   
   validates :opinion, presence: true

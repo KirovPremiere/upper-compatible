@@ -114,6 +114,10 @@
 #footer a{
   text-decoration: none;
   color: #fff;
+  transition: all 0.3s ease 0s;
+}
+#footer a:hover{
+  color: #000;
 }
 
 #footer p {
@@ -142,19 +146,21 @@
 }
 .info a {
   font-size: 2rem;
-  background: #0bd;
+  background: #fff;
   border-radius: 5px;
   padding: 10px 20px;
-  color: #fff;
+  border: 0.1875em solid #333;
+  color: #333;
   text-decoration: none;
   display: inline-block;
   margin-top: 18px;
+  transition: all 0.3s ease 0s;
 }
 .info a:hover {
-  background: #0090aa;
+  background: #333;
+  color: #fff;
 }
 .cut1 {
-  /* background-image: image-url("noimage.jpeg") no-repeat top center; */
   background-image: image-url("noimage.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -239,5 +245,14 @@
  display: flex;
  flex-wrap: wrap;
  flex-direction: column;
+}
+
+
+/*アイテムカードhover時*/
+.card{
+  transition: all 0.3s ease 0s;
+}
+.card:hover{
+  opacity: 0.6;
 }
 

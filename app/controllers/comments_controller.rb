@@ -7,9 +7,13 @@ class CommentsController < ApplicationController
   
   def create
     @comment = Comment.new(comment_params)
-    @comment.customer_id = current_customer
-    @comment.save
-    redirect_to item_comments_path
+    @comment.customer_id = current_customer.id
+    @comment.item_id = params[:item_id]
+    if @comment.save
+      redirect_to item_path(params[:item_id])
+    else
+      render :new
+    end
   end
   
   def edit
@@ -25,7 +29,7 @@ class CommentsController < ApplicationController
   
   private
   def comment_params
-    params.require(:comment).permit(:opinion, :price, :point)
+    params.require(:comment).permit(:opinion, :price, :point, :image)
   end
 
 end

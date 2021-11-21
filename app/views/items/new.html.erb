@@ -31,15 +31,15 @@
         </div>
 
         <div class="row --bs-gutter-x-0">
-          <div class="offset-2 col-4 mt-4">
+          <div class="offset-2 col-4 mt-4 px-2">
             <%= f.label :商品紹介 %>
           </div>
-          <div class="col-6 form-inline">
+          <div class="col-6 form-inline px-2">
             <%= f.text_area :introduction, rows:'5', autofocus: true, placeholder: "商品紹介文を記入", class:"col-8 mt-4" %>
           </div>
         </div>
 
-        <div class="offset-6 col-4 mt-4 mb-4">
+        <div class="offset-6 col-4 mt-4 mb-4 px-2">
           <%= f.submit "商品を新規投稿する", class:"btn btn-primary" %>
         </div>
       <% end %>

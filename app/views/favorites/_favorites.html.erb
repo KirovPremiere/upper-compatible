@@ -1,12 +1,12 @@
 <% if comment.favorited_by?(current_customer) %>
   <p>
-    <%= link_to comment_favorites_path(comment), method: :delete, remote: true do %>
+    <%= link_to item_comment_favorites_path(comment), method: :delete, remote: true do %>
       ♥<%= comment.favorites.count %> いいね
     <% end %>
   </p>
   <% else %>
   <p>
-    <%= link_to comment_favorites_path(comment), method: :post, remote: true do %>
+    <%= link_to item_comment_favorites_path(comment), method: :post, remote: true do %>
       ♡<%= comment.favorites.count %> いいね
     <% end %>
   </p>

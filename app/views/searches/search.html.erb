@@ -31,7 +31,7 @@
 
 <% if @items.empty? %>
   <div class="top-bg-center">
-    <div class="container p-4 justify-content-center ">
+    <div class="container p-4 justify-content-center">
       <h3 class="mt-5 text-center">アイテム一覧</h2>
       <p class="text-center text-body mt-3">該当するジャンルはありません</p>
     </div>
@@ -47,7 +47,9 @@
               <div class="card m-2 p-3 bg-light" style="width: 270px;">
                 <%= link_to item_path(data.id), class: "link-style text-decoration-none" do %>
                   <div class="item-img-box2"><%= attachment_image_tag(data, :image, size:"237x158", fallback: "noimage.jpeg")%></div>
-                  <p class="item-index-name mt-2 mb-0 text-body"><%= data.name %></p>
+                  <h5 class="item-index-name mt-2 mb-0 text-body"><%= data.name %></h5>
+                  <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：</p>
+                  <p class="item-index-name mt-1 mb-0 text-body">平均満足度：</p>
                 <% end %>
               </div>
             <% end %>
