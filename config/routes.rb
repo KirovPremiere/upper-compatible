@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :big_fours, only: [:show]
   resources :genres, only: [:index, :show]
   resources :items, only: [:new, :create, :show, :edit, :update] do
-    resources :comments, only: [:new, :create, :edit, :update] 
+    resources :comments, only: [:new, :create, :edit, :update] do
+      resource :favorites, only: [:create, :destroy]
+    end
   end
 
   devise_for :customer, controllers: {

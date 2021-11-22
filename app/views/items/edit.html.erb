@@ -2,23 +2,22 @@
   <div class="container py-5">
     <div class="row w-50 mx-auto shadow-lg bg-white bg-opacity-50">
       <div class="mt-5">
-        <span class="fs-3 offset-md-1 font-monospace login-form"><b>新規商品追加</b></span>
+        <span class="fs-3 offset-md-1 font-monospace login-form"><b>商品編集</b></span>
       </div>
-      <%= form_with model: @item, url: items_path, local: true do |f| %>
+      <%= form_with model: @item, url: item_path(@item.id), local: true do |f| %>
         <div class="form-inline">
           <%= f.label :商品名, class:"offset-2 col-4 mt-3" %>
-          <%= f.text_field :name, autofocus: true, placeholder:"商品名を入力" %>
+          <%= f.text_field :name, autofocus: true %>
         </div>
 
         <div class="form-inline">
           <%= f.label :big_four_id, "4つの大ジャンル", class:"offset-2 col-4 mt-3" %>
-          <%= f.select :big_four_id, @big_fours.map{ |big_four| [big_four.name, big_four.id] }, {include_blank:'--選択してください--'}, class:"col-4", id:"boxA" %>
+          <%= f.select :big_four_id, @big_fours.map{ |big_four| [big_four.name, big_four.id] }, {:selected => @item.genre.big_four_id}, class:"col-4", id:"boxA" %>
         </div>
 
         <div class="form-inline">
           <%= f.label :genre_id, "ジャンル", class:"offset-2 col-4 mt-3" %>
           <select name="item[genre_id]" id="boxB" class="col-4" required="true" >
-            <option value="">--選択してください--</option>
             <% @genres.each do |genre| %>
             <option value="<%= genre.id %>" data-id="<%= genre.big_four_id %>"><%= genre.name %></option>
             <% end %>
@@ -50,6 +49,9 @@
 
 <script>
   $('#boxB option[data-id]').hide();
+  $("#boxB option[data-id='"+ $('#boxA').val() +"']").show();
+  const genre_id = gon.genre_id
+  $("#boxB option[value='"+ genre_id +"']").prop('selected', true);
 
   $('#boxA').change(function () {
     // Aが変更されるときに一度非表示にする

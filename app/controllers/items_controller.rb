@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
-    @comments = Comment.all
+    @comments = Comment.where(item_id: @item.id)
   end
 
   def new
@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.customer_id = current_customer.id
     if @item.save
       redirect_to item_path(@item)
     else
@@ -27,6 +28,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @big_fours = BigFour.all
     @genres = Genre.all
+    gon.genre_id = @item.genre.id
   end
 
   def update
@@ -37,7 +39,7 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :image, :genre_id, :introduction)
+    params.require(:item).permit(:name, :image, :genre_id, :introduction, :customer_id)
   end
 
 end

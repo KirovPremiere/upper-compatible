@@ -4,7 +4,7 @@
       <div class="mt-5">
         <span class="fs-3 offset-md-1 font-monospace comment-form"><b>コメント編集</b></span>
       </div>
-      <%= form_with model: @comment, url: item_comments_path, local: true do |f| %>
+      <%= form_with model: [@item,@comment], local: true do |f| %>
         <div class="form-inline">
           <%= f.label :購入時価格, class:"offset-2 col-4 mt-3" %>
           <%= f.text_field :price, autofocus: true %><b> 円</b>

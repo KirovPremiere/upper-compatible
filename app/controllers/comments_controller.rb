@@ -17,13 +17,14 @@ class CommentsController < ApplicationController
   end
   
   def edit
+    @item = Item.find(params[:item_id])
     @comment = Comment.find(params[:id])
   end
   
   def update
     @comment = Comment.find(params[:id])
     @comment.update(comment_params)
-    redirect_to item_comment_path(@comment.id)
+    redirect_to item_path(params[:item_id])
   end
   
   

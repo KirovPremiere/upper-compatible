@@ -3,9 +3,9 @@
     <div class='row'>
       <div class='col-md-12 mx-auto text-center items-all'>
         <h1 class="mt-3"><%= @genre.name %>の商品一覧</h1>
-        
-        
-        
+
+
+
         <h2 class="mt-3">登録済み商品一覧</h2>
         <div class="item-index d-flex flex-wrap mt-3 mx-4 justify-content-center">
           <% @items.each do |item| %>
@@ -13,8 +13,13 @@
               <%= link_to item_path(item), class: "link-style text-decoration-none" do %>
                 <div class="item-img-box2"><%= attachment_image_tag(item, :image, size:"237x158", fallback: "noimage.png")%></div>
                 <p class="item-index-name mt-2 mb-0 text-body"><b><%= item.name %></b></p>
-                <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：</p>
-                <p class="item-index-name mt-1 mb-0 text-body">平均満足度：</p>
+                <% if item.comments.present? %>
+                  <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：　<b><%= item.comments.average(:price).to_i %>円</b></p>
+                  <p class="item-index-name mt-1 mb-0 text-body">平均満足度：　<b><%= item.comments.average(:point).round(2) %>％</b></p>
+                <% else %>
+                  <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：　<b>----------円</b></p>
+                  <p class="item-index-name mt-1 mb-0 text-body">平均満足度：　<b>----------％</b></p>
+                <% end %>
               <% end %>
             </div>
           <% end %>

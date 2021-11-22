@@ -14,13 +14,11 @@
           <h3 class="mt-5">ジャンル一覧</h2>
           <div class="item-index d-flex flex-wrap mt-3 justify-content-center">
             <% @genres.each do |data| %>
-
               <div class="card m-2 p-3 bg-light" style="width: 270px;">
                 <%= link_to genre_path(data.id), class: "link-style text-decoration-none" do %>
                   <p class="item-index-name mt-0 mb-0 text-body "><%= data.name %></p>
                 <% end %>
               </div>
-
             <% end %>
           </div>
         </div>
@@ -48,8 +46,13 @@
                 <%= link_to item_path(data.id), class: "link-style text-decoration-none" do %>
                   <div class="item-img-box2"><%= attachment_image_tag(data, :image, size:"237x158", fallback: "noimage.jpeg")%></div>
                   <h5 class="item-index-name mt-2 mb-0 text-body"><%= data.name %></h5>
-                  <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：</p>
-                  <p class="item-index-name mt-1 mb-0 text-body">平均満足度：</p>
+                  <% if data.comments.present? %>
+                    <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：　<b><%= data.comments.average(:price).to_i %>円</b></p>
+                    <p class="item-index-name mt-1 mb-0 text-body">平均満足度：　<b><%= data.comments.average(:point).round(2) %>％</b></p>
+                  <% else %>
+                    <p class="item-index-name mt-1 mb-0 text-body">平均購入価格：　<b>----------円</b></p>
+                    <p class="item-index-name mt-1 mb-0 text-body">平均満足度：　<b>----------％</b></p>
+                  <% end %>
                 <% end %>
               </div>
             <% end %>

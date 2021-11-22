@@ -8,6 +8,4 @@ class GenresController < ApplicationController
     @items = @genre.items
   end
   
-  
-  
 end

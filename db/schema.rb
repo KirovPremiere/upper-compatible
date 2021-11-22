@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_11_19_025840) do
 
   create_table "items", force: :cascade do |t|
     t.integer "genre_id"
+    t.integer "customer_id"
     t.string "image_id", default: "", null: false
     t.text "introduction", null: false
     t.string "name", default: "", null: false

@@ -23,6 +23,7 @@
   padding: 0;
   font-size: inherit;
   line-height: inherit;
+  font-family: "M PLUS 1p";
 }
 
 
@@ -86,11 +87,6 @@
   border: 2px solid #000;
   object-fit: cover;
 }
-
-
-
-
-
 
 
 /*フッター処理*/
@@ -254,5 +250,134 @@
 }
 .card:hover{
   opacity: 0.6;
+}
+
+
+
+/*item先頭の２分割*/
+.boxes{
+  display: flex;
+}
+.boxes .box1{
+  width: 50%;
+}
+.boxes .box2{
+  width: 50%;
+}
+
+/*商品の見出し*/
+.boxes h2 {
+  position: relative;
+  line-height: 1.4;
+  padding:0.25em 1em;
+  display: inline-block;
+  top:0;
+}
+
+.boxes h2:before,.boxes  h2:after { 
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 8px;
+  height: 100%;
+  display: inline-block;
+}
+.boxes h2:before {
+  border-left: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  left: 0;
+}
+.boxes h2:after {
+  content: '';
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  right: 0;
+}
+
+/*商品の強調*/
+.boxes .flash {
+  position: relative;
+  padding: 1rem .5rem;
+  color: #FFF803;
+  text-shadow: .8px .8px 0 #000, -.8px .8px 0 #000, .8px -.8px 0 #000, -.8px -.8px 0 #000;
+}
+
+.boxes .flash:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  content: '';
+  background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+  background-image: -webkit-linear-gradient(left, #fa709a 0%, #fee140 100%);
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+.boxes .bordering{
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+}
+
+
+/*商品写真*/
+.box1 .img-container img{
+  padding: 11px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 18px -4px rgba(0, 0, 0, 0.8);
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*商品へのコメント*/
+.box3{
+  width: 75%;
+  background: #F5F5F5;
+  border-left: solid 6px #FFF803;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
+  border-radius: 8px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.comment-btn{
+  border: 2px solid #000;
+  border-radius: 0;
+  background: #fff;
+}
+.comment-btn:hover{
+  color: #fff;
+  background: #000;
+}
+.comment-title h1{
+  position: relative;
+  display: inline-block;
+  padding: 0 65px;
+  text-align: center;
+}
+
+.comment-title h1:before,
+.comment-title h1:after {
+  position: absolute;
+  top: calc(50% - 3px);
+  width: 50px;
+  height: 6px;
+  content: '';
+  border-top: solid 2px #000;
+  border-bottom: solid 2px #000;
+}
+
+.comment-title h1:before {
+  left: 0;
+}
+
+.comment-title h1:after {
+  right: 0;
 }
 

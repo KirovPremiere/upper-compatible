@@ -20,7 +20,7 @@
           <select name="item[genre_id]" id="boxB" class="col-4" required="true" >
             <option value="">--選択してください--</option>
             <% @genres.each do |genre| %>
-            <option value="<%= genre.id %>" data-id="<%= genre.big_four_id %>"><%= genre.name %></option>
+              <option value="<%= genre.id %>" data-id="<%= genre.big_four_id %>"><%= genre.name %></option>
             <% end %>
           </select>
         </div>

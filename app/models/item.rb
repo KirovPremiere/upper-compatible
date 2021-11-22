@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :genre
+  belongs_to :customer
   has_many :comments
   attachment :image
 

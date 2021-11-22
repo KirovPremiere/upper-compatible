@@ -69,6 +69,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'enum_help'
 gem 'ancestry'
+gem 'gon'
 
 gem 'dotenv-rails'
 group :production do
