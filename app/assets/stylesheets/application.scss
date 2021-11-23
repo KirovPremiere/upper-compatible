@@ -94,8 +94,7 @@
 #footer {
   border-top: solid 1px lightgray;
   padding-bottom: 10px;
-  background-color: #3E474F;
-  font-family: "M PLUS 1p";
+  background-color: #333;
 }
 
 #footer ul {
@@ -114,7 +113,7 @@
   transition: all 0.3s ease 0s;
 }
 #footer a:hover{
-  color: #000;
+  color: #ee7800;
 }
 
 #footer p {
@@ -407,4 +406,11 @@
   content: '';
   border-radius: 3px;
   background: #FFF803;
+}
+
+/*チャート*/
+.item-chart{
+  width: 85%;
+  margin: auto;
+  background-color: #F5F5F5;
 }
