@@ -29,11 +29,6 @@
 - [テーブル定義書](https://docs.google.com/spreadsheets/d/19BEv5GkJVLNu_pis4__6ZHV-sytStTGhhHJ7wPKihHs/edit?usp=sharing)
 - [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1FBgLcdZ0LU6JVQXf0qCswS6-6ZOYyuCdThckANCiWnQ/edit?usp=sharing)
 
-## カラー
-- メイン　#FFF803
-- サブ　#201D19
-- スーパーサブ　#3E474F
-
 ## フォント(時々使うフォント)
 - font-family: "M PLUS 1p";
 
@@ -48,3 +43,4 @@
 - IDE：Cloud9
 
 ## 使用素材（現状考えていないが利用するようなら追記）
+- イラストACにて素材4枚
