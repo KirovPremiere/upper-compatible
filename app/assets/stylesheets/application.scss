@@ -40,14 +40,12 @@
 .header{
   margin: 0 auto;
   background-color: #fff ;
-  width: 90%;
+  width: 100%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 35px 35px;
   align-items: center;
   display: flex;
   height: 6.125rem;
   justify-content: center;
-  font-family: "M PLUS 1p";
 }
 .header nav ul {
   display: flex;
@@ -74,6 +72,9 @@
   margin: 0 auto;
   padding: 10px 20px;
   display: inline-block;
+}
+.header-back{
+  background-color: #3E474F;
 }
 
 
@@ -157,28 +158,28 @@
   color: #fff;
 }
 .cut1 {
-  background-image: image-url("noimage.png");
+  background-image: image-url("big1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: rgba(255,255,255,.7);
 }
 .cut2 {
-  background-image: image-url("noimage.png");
+  background-image: image-url("big2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: rgba(255,255,255,.7);
 }
 .cut3 {
-  background-image: image-url("noimage.png");
+  background-image: image-url("big3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: rgba(255,255,255,.7);
 }
 .cut4 {
-  background-image: image-url("noimage.png");
+  background-image: image-url("big4.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -195,7 +196,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
-  background: #dadada;
+  background: #333;
 }
 
 .search .Box {
@@ -269,9 +270,9 @@
 .boxes h2 {
   position: relative;
   line-height: 1.4;
-  padding:0.25em 1em;
+  padding: 0.25em 0.75em;
   display: inline-block;
-  top:0;
+  top: 0;
 }
 
 .boxes h2:before,.boxes  h2:after { 
@@ -358,7 +359,7 @@
 .comment-title h1{
   position: relative;
   display: inline-block;
-  padding: 0 65px;
+  padding: 0 75px;
   text-align: center;
 }
 
@@ -381,3 +382,29 @@
   right: 0;
 }
 
+.like-btn h5 a{
+  text-decoration: none;
+}
+
+.item-comment-img{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/*genre表示時の見出し*/
+.genre-all h1{
+  position: relative;
+  padding: 1.5rem;
+  text-align: center;
+}
+.genre-all h1:before {
+  position: absolute;
+  bottom: 5px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: #FFF803;
+}

@@ -6,6 +6,11 @@
       </div>
       <%= form_with model: [@item,@comment], local: true do |f| %>
         <div class="form-inline">
+          <%= f.label :購入場所, class:"offset-2 col-4 mt-3" %>
+          <%= f.text_field :place, autofocus: true %>
+        </div>
+        
+        <div class="form-inline">
           <%= f.label :購入時価格, class:"offset-2 col-4 mt-3" %>
           <%= f.text_field :price, autofocus: true %><b> 円</b>
         </div>
