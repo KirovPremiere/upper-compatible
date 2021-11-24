@@ -24,11 +24,6 @@
 - 新規購入を考えている時
 - いいものを見つけて誰かに紹介したい時
 
-## 設計書（テーマ合格後作成）
-- [ER図](https://drive.google.com/file/d/1HZldMj0OLRbSZSHevbTFHhoArZF7Rl0w/view?usp=sharing)
-- [テーブル定義書](https://docs.google.com/spreadsheets/d/19BEv5GkJVLNu_pis4__6ZHV-sytStTGhhHJ7wPKihHs/edit?usp=sharing)
-- [アプリケーション詳細設計](https://docs.google.com/spreadsheets/d/1FBgLcdZ0LU6JVQXf0qCswS6-6ZOYyuCdThckANCiWnQ/edit?usp=sharing)
-
 ## フォント(時々使うフォント)
 - font-family: "M PLUS 1p";
 
