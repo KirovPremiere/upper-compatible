@@ -3,11 +3,12 @@ class Comment < ApplicationRecord
   belongs_to :customer
   has_many :favorites
   attachment :image
-  
+
   def favorited_by?(customer)
+    return false if customer.nil?
     favorites.where(customer_id: customer.id).exists?
   end
-  
+
   validates :opinion, presence: true
   validates :place, presence: true
   validates :price, presence: true, numericality: { only_integer: true }

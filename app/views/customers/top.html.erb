@@ -1,12 +1,16 @@
-<div class="wrapper mt-2">
+<div class="wrapper">
   <div class="column cut1">
     <div class="info">
-      <a href="big_fours/9"><h2>日用品</h2></a>
+      <%= link_to big_four_path(@big_fours[0]) do %>
+        <h2><%= @big_fours[0].name %></h2>
+      <% end %>
     </div>
   </div>
   <div class="column cut2">
     <div class="info">
-      <a href="big_fours/10"><h2>食品・飲料</h2></a>
+      <%= link_to big_four_path(@big_fours[1]) do %>
+        <h2><%= @big_fours[1].name %></h2>
+      <% end %>
     </div>
   </div>
 </div>
@@ -27,12 +31,16 @@
 <div class="wrapper">
   <div class="column cut3">
     <div class="info">
-      <a href="big_fours/11"><h2>家電・家具</h2></a>
+      <%= link_to big_four_path(@big_fours[2]) do %>
+        <h2><%= @big_fours[2].name %></h2>
+      <% end %>
     </div>
   </div>
   <div class="column cut4">
     <div class="info">
-      <a href="big_fours/12"><h2>文房具</h2></a>
+      <%= link_to big_four_path(@big_fours[3]) do %>
+        <h2><%= @big_fours[3].name %></h2>
+      <% end %>
     </div>
   </div>
 </div>

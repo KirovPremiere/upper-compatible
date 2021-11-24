@@ -26,6 +26,11 @@
   font-family: "M PLUS 1p";
 }
 
+/*mainのbackground-image*/
+main{
+  background-image: image-url("webb.png");
+  padding-top: 98px;
+}
 
 /*空欄エラー*/
 .field_with_errors {
@@ -38,14 +43,16 @@
 
 /*ヘッダー処理*/
 .header{
+  position: fixed;
   margin: 0 auto;
   background-color: #fff ;
   width: 100%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   align-items: center;
   display: flex;
-  height: 6.125rem;
+  height: 6rem;
   justify-content: center;
+  z-index: 50;
 }
 .header nav ul {
   display: flex;
@@ -66,15 +73,12 @@
 .header a {
   color: #000;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
 }
 .header .logo {
   margin: 0 auto;
   padding: 10px 20px;
   display: inline-block;
-}
-.header-back{
-  background-color: #3E474F;
 }
 
 
@@ -405,12 +409,14 @@
   height: 5px;
   content: '';
   border-radius: 3px;
-  background: #FFF803;
+  background: #ee7800;
 }
 
 /*チャート*/
 .item-chart{
+  height: auto;
   width: 85%;
+  padding: 15px;
   margin: auto;
-  background-color: #F5F5F5;
+  background-color: #fff;
 }

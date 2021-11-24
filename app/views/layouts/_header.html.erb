@@ -1,21 +1,19 @@
-<div class="header-back">
-  <header class="header">
-    <nav>
-      <ul>
-        <li>ー<%= link_to "ホーム", root_path %>ー</li>
-        <li>ー<%= link_to "ジャンル一覧", genres_path %>ー</li>
-        <li>ー<%= link_to "サイト情報", about_path %>ー</li>
-        <li class="logo"><%= link_to image_tag("upper-compatible.png", size: "210x70"), root_path, class: "image", alt: "ロゴ" %></li>
-        <% if customer_signed_in? %>
-          <li>ー<%= link_to "商品登録", new_item_path %>ー</li>
-          <li>ー<%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>ー</li>
-          <li>ー<%= link_to "マイページ", customers_path %>ー</li>
-        <% else %>
-          <li>ー<%= link_to "ログイン", new_customer_session_path %>ー</li>
-          <li>ー<%= link_to "新規登録", new_customer_registration_path %>ー</li>
-          <li>ー<%= link_to "お問い合わせ", info_path %>ー</li>
-        <% end %>
-      </ul>
-    </nav>
-  </header>
-</div>
+<header class="header">
+  <nav>
+    <ul>
+      <li><%= link_to "ホーム", root_path %></li>
+      <li><%= link_to "ジャンル一覧", genres_path %></li>
+      <li><%= link_to "サイト情報", about_path %></li>
+      <li class="logo"><%= link_to image_tag("upper-compatible.png", size: "210x70"), root_path, class: "image", alt: "ロゴ" %></li>
+      <% if customer_signed_in? %>
+        <li><%= link_to "商品登録", new_item_path %></li>
+        <li><%= link_to "ログアウト", destroy_customer_session_path, method: :delete %></li>
+        <li><%= link_to "マイページ", customers_path %></li>
+      <% else %>
+        <li><%= link_to "ログイン", new_customer_session_path %></li>
+        <li><%= link_to "新規登録", new_customer_registration_path %></li>
+        <li><%= link_to "お問い合わせ", info_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

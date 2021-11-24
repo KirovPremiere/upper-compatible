@@ -5,7 +5,7 @@ class GenresController < ApplicationController
   
   def show
     @genre = Genre.find(params[:id])
-    @items = @genre.items
+    @items = @genre.items.order("name")
     
     #グラフの描画
     @result = []

@@ -40,9 +40,19 @@
           <% if comment.image_id.present? %>
             <%= attachment_image_tag comment, :image, class:"item-comment-img my-2" %>
           <% end %>
-          <div id="favorite_buttons_<%= comment.id %>" class="like-btn mt-2">
-            <%= render "favorites/favorites", item: @item, comment: comment %>
-          </div>
+          
+          <% if customer_signed_in? %>
+            <div id="favorite_buttons_<%= comment.id %>" class="like-btn mt-2">
+              <%= render "favorites/favorites", item: @item, comment: comment %>
+            </div>
+          <% else %>
+            <h5>
+              <%= link_to new_customer_session_path do %>
+                ♥<%= comment.favorites.count %> いいね
+              <% end %>
+            </h5>
+          <% end %>
+          
           <% if comment.customer == current_customer %>
             <%= link_to "コメント編集", edit_item_comment_path(@item.id, comment.id) %>
           <% end %>
