@@ -8,6 +8,7 @@ class CreateComments < ActiveRecord::Migration[5.2]
       t.string :image_id, default: "", null: false
       t.integer :price, null: false
       t.integer :point, null: false
+      t.decimal "score", precision: 5, scale: 3
 
       t.timestamps
     end

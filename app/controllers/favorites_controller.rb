@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
   before_action :authenticate_customer!
-  
+
   def create
     @item = Item.find(params[:item_id])
     @comment = Comment.find(params[:comment_id])
@@ -14,5 +14,5 @@ class FavoritesController < ApplicationController
     favorite = current_customer.favorites.find_by(comment_id: @comment.id)
     favorite.destroy
   end
-  
+
 end

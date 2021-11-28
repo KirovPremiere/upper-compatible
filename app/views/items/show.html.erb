@@ -37,6 +37,7 @@
           <h5>購入場所：<%= comment.place %></h5>
           <h5 class="mt-3">商品コメント</h5>
           <p><%= comment.opinion %></p>
+          <p class="sentiment-score">コメントの感情分析スコア[<%= comment.score %> / 1.0]</p>
           <% if comment.image_id.present? %>
             <%= attachment_image_tag comment, :image, class:"item-comment-img my-2" %>
           <% end %>
