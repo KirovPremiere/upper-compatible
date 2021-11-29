@@ -3,11 +3,11 @@
     <div class='row'>
       <div class='col-md-12 mx-auto text-center items-all genre-all'>
         <h1 class=""><%= @genre.name %>の商品一覧</h1>
-        
+
         <div class="item-chart mt-4">
           <%= scatter_chart @result, xtitle: "＜＜不満　　　平均満足度（％）　　満足＞＞︎", ytitle: "平均購入価格（円）", legend: false, suffix: "円", dataset: {borderWidth: 7}, thousands: ","  %>
         </div>
-        
+
         <h2 class="mt-5">登録済み商品一覧</h2>
         <div class="item-index d-flex flex-wrap mt-3 mx-4 justify-content-center">
           <% @items.each do |item| %>
